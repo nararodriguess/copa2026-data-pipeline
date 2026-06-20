@@ -1,0 +1,12 @@
+name: 'copa2026'
+version: '1.0.0'
+
+profile: 'copa2026'
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target"]
+
+models:
+  copa2026:
+    +materialized: view

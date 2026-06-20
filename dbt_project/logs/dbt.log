@@ -1,0 +1,263 @@
+[0m20:39:46.240492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7871765dbce0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7871737e0080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x787173db1b50>]}
+
+
+============================== 20:39:46.249426 | 92f350c5-5c79-4b35-abca-064669584787 ==============================
+[0m20:39:46.249426 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m20:39:46.250247 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/opt/airflow/dbt_project', 'write_json': 'True', 'printer_width': '80', 'quiet': 'False', 'cache_selected_only': 'False', 'use_colors': 'True', 'warn_error': 'None', 'log_format': 'default', 'static_parser': 'True', 'maximum_seed_size_mib': '1', 'version_check': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug --project-dir /opt/airflow/dbt_project --profiles-dir /opt/airflow/dbt_project', 'log_path': '/opt/airflow/dbt_project/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'empty': 'None', 'log_cache_events': 'False', 'partial_parse': 'True', 'target_path': 'None', 'debug': 'False', 'fail_fast': 'False'}
+[0m20:39:46.267852 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m20:39:46.268367 [info ] [MainThread]: python version: 3.12.3
+[0m20:39:46.268789 [info ] [MainThread]: python path: /home/airflow/.local/bin/python
+[0m20:39:46.269347 [info ] [MainThread]: os info: Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[0m20:39:46.399050 [info ] [MainThread]: Using profiles dir at /opt/airflow/dbt_project
+[0m20:39:46.399632 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/dbt_project/profiles.yml
+[0m20:39:46.400282 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt_project/dbt_project.yml
+[0m20:39:46.401441 [info ] [MainThread]: adapter type: postgres
+[0m20:39:46.402211 [info ] [MainThread]: adapter version: 1.10.1
+[0m20:39:46.554456 [info ] [MainThread]: Configuration:
+[0m20:39:46.555427 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:39:46.556783 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:39:46.557809 [info ] [MainThread]: Required dependencies:
+[0m20:39:46.559002 [debug] [MainThread]: Executing "git --help"
+[0m20:39:46.567922 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m20:39:46.568549 [info ] [MainThread]: Connection:
+[0m20:39:46.569099 [info ] [MainThread]:   host: postgres
+[0m20:39:46.569713 [info ] [MainThread]:   port: 5432
+[0m20:39:46.570531 [info ] [MainThread]:   user: copa
+[0m20:39:46.571640 [info ] [MainThread]:   database: copa2026
+[0m20:39:46.573128 [info ] [MainThread]:   schema: public
+[0m20:39:46.574269 [info ] [MainThread]:   connect_timeout: 10
+[0m20:39:46.576038 [info ] [MainThread]:   role: None
+[0m20:39:46.577599 [info ] [MainThread]:   search_path: None
+[0m20:39:46.579378 [info ] [MainThread]:   keepalives_idle: 0
+[0m20:39:46.581150 [info ] [MainThread]:   sslmode: None
+[0m20:39:46.582652 [info ] [MainThread]:   sslcert: None
+[0m20:39:46.584378 [info ] [MainThread]:   sslkey: None
+[0m20:39:46.591876 [info ] [MainThread]:   sslrootcert: None
+[0m20:39:46.594609 [info ] [MainThread]:   application_name: dbt
+[0m20:39:46.595653 [info ] [MainThread]:   retries: 1
+[0m20:39:46.596583 [info ] [MainThread]: Registered adapter: postgres=1.10.1
+[0m20:39:46.743443 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m20:39:46.839504 [debug] [MainThread]: Using postgres connection "debug"
+[0m20:39:46.844748 [debug] [MainThread]: On debug: select 1 as id
+[0m20:39:46.851580 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:39:46.873218 [debug] [MainThread]: SQL status: SELECT 1 in 0.022 seconds
+[0m20:39:46.874952 [debug] [MainThread]: On debug: Close
+[0m20:39:46.875612 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:39:46.876144 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:39:46.876809 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m20:39:46.879321 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.7348584, "process_in_blocks": "2216", "process_kernel_time": 1.050415, "process_mem_max_rss": "123612", "process_out_blocks": "24", "process_user_time": 3.17931}
+[0m20:39:46.879993 [debug] [MainThread]: Command `dbt debug` failed at 20:39:46.879865 after 0.74 seconds
+[0m20:39:46.880419 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:39:46.880846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x78717323d2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x787173202db0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7871735ad670>]}
+[0m20:39:46.881342 [debug] [MainThread]: Flushing usage events
+[0m20:39:47.593201 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:40:35.507112 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5118a51d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5118df9bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f511a317920>]}
+
+
+============================== 20:40:35.522915 | a16b2d81-e1a0-4aaa-9492-21d8c4a48926 ==============================
+[0m20:40:35.522915 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m20:40:35.524091 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'cache_selected_only': 'False', 'warn_error': 'None', 'profiles_dir': '/opt/airflow/dbt_project', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'write_json': 'True', 'introspect': 'True', 'log_path': '/opt/airflow/dbt_project/logs', 'target_path': 'None', 'static_parser': 'True', 'maximum_seed_size_mib': '1', 'empty': 'False', 'version_check': 'True', 'quiet': 'False', 'partial_parse': 'True', 'log_format': 'default', 'use_colors': 'True', 'debug': 'False', 'printer_width': '80', 'invocation_command': 'dbt run --project-dir /opt/airflow/dbt_project --profiles-dir /opt/airflow/dbt_project'}
+[0m20:40:36.874823 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a16b2d81-e1a0-4aaa-9492-21d8c4a48926', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f511791a2a0>]}
+[0m20:40:36.999206 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a16b2d81-e1a0-4aaa-9492-21d8c4a48926', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5116f2b680>]}
+[0m20:40:37.001082 [info ] [MainThread]: Registered adapter: postgres=1.10.1
+[0m20:40:37.164058 [debug] [MainThread]: checksum: 2c1492aafb80c3753475494505ba81ed2b5cda9b1a0684093b06ec21f9341211, vars: {}, profile: copa2026, target: dev, version: 1.12.0b3
+[0m20:40:37.164945 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:40:37.165501 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a16b2d81-e1a0-4aaa-9492-21d8c4a48926', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f51179016a0>]}
+[0m20:40:38.837640 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a16b2d81-e1a0-4aaa-9492-21d8c4a48926', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5115b0dcd0>]}
+[0m20:40:38.926333 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_project/target/manifest.json
+[0m20:40:38.929574 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_project/target/semantic_manifest.json
+[0m20:40:38.978271 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt_project/target/osi_document.json
+[0m20:40:39.004269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a16b2d81-e1a0-4aaa-9492-21d8c4a48926', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5118bf5ac0>]}
+[0m20:40:39.004893 [info ] [MainThread]: Found 1 model, 475 macros
+[0m20:40:39.005439 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a16b2d81-e1a0-4aaa-9492-21d8c4a48926', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5116b3c860>]}
+[0m20:40:39.007717 [info ] [MainThread]: 
+[0m20:40:39.008334 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:40:39.008869 [info ] [MainThread]: 
+[0m20:40:39.009961 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:40:39.011583 [debug] [ThreadPool]: Acquiring new postgres connection 'list_copa2026'
+[0m20:40:39.064823 [debug] [ThreadPool]: Using postgres connection "list_copa2026"
+[0m20:40:39.065880 [debug] [ThreadPool]: On list_copa2026: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "copa2026", "target_name": "dev", "connection_name": "list_copa2026"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:40:39.066366 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:40:39.082005 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.015 seconds
+[0m20:40:39.084093 [debug] [ThreadPool]: On list_copa2026: Close
+[0m20:40:39.086016 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_copa2026, now list_copa2026_public)
+[0m20:40:39.092694 [debug] [ThreadPool]: Using postgres connection "list_copa2026_public"
+[0m20:40:39.093186 [debug] [ThreadPool]: On list_copa2026_public: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "copa2026", "target_name": "dev", "connection_name": "list_copa2026_public"} */
+select
+      'copa2026' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'copa2026' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'copa2026' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m20:40:39.093710 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:40:39.133323 [debug] [ThreadPool]: SQL status: SELECT 43 in 0.040 seconds
+[0m20:40:39.135664 [debug] [ThreadPool]: On list_copa2026_public: ROLLBACK
+[0m20:40:39.136465 [debug] [ThreadPool]: On list_copa2026_public: Close
+[0m20:40:39.150056 [debug] [MainThread]: Using postgres connection "master"
+[0m20:40:39.150603 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "copa2026", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m20:40:39.151144 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:40:39.179378 [debug] [MainThread]: SQL status: SELECT 0 in 0.028 seconds
+[0m20:40:39.181424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a16b2d81-e1a0-4aaa-9492-21d8c4a48926', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5115b05550>]}
+[0m20:40:39.182336 [debug] [MainThread]: On master: ROLLBACK
+[0m20:40:39.183075 [debug] [MainThread]: On master: COMMIT
+[0m20:40:39.183505 [debug] [MainThread]: Using postgres connection "master"
+[0m20:40:39.183898 [debug] [MainThread]: On master: COMMIT
+[0m20:40:39.184582 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:40:39.185004 [debug] [MainThread]: On master: Close
+[0m20:40:39.193406 [debug] [Thread-1 (]: Began running node model.copa2026.team_rankings
+[0m20:40:39.194162 [info ] [Thread-1 (]: 1 of 1 START sql view model public.team_rankings ............................... [RUN]
+[0m20:40:39.194774 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_copa2026_public, now model.copa2026.team_rankings)
+[0m20:40:39.195251 [debug] [Thread-1 (]: Began compiling node model.copa2026.team_rankings
+[0m20:40:39.202509 [debug] [Thread-1 (]: Writing injected SQL for node "model.copa2026.team_rankings"
+[0m20:40:39.206441 [debug] [Thread-1 (]: Began executing node model.copa2026.team_rankings
+[0m20:40:39.266898 [debug] [Thread-1 (]: Writing runtime sql for node "model.copa2026.team_rankings"
+[0m20:40:39.268985 [debug] [Thread-1 (]: Using postgres connection "model.copa2026.team_rankings"
+[0m20:40:39.269615 [debug] [Thread-1 (]: On model.copa2026.team_rankings: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "copa2026", "target_name": "dev", "node_id": "model.copa2026.team_rankings"} */
+
+  create view "copa2026"."public"."team_rankings__dbt_tmp"
+    
+    
+  as (
+    WITH match_results AS (
+    SELECT
+        home_team AS team,
+        CASE WHEN home_score > away_score THEN 3
+             WHEN home_score = away_score THEN 1
+             ELSE 0 END AS points,
+        CASE WHEN home_score > away_score THEN 1 ELSE 0 END AS wins,
+        CASE WHEN home_score = away_score THEN 1 ELSE 0 END AS draws,
+        CASE WHEN home_score < away_score THEN 1 ELSE 0 END AS losses,
+        home_score AS goals_scored,
+        away_score AS goals_conceded
+    FROM matches
+    WHERE status = 'FINISHED'
+
+    UNION ALL
+
+    SELECT
+        away_team AS team,
+        CASE WHEN away_score > home_score THEN 3
+             WHEN away_score = home_score THEN 1
+             ELSE 0 END AS points,
+        CASE WHEN away_score > home_score THEN 1 ELSE 0 END AS wins,
+        CASE WHEN away_score = home_score THEN 1 ELSE 0 END AS draws,
+        CASE WHEN away_score < home_score THEN 1 ELSE 0 END AS losses,
+        away_score AS goals_scored,
+        home_score AS goals_conceded
+    FROM matches
+    WHERE status = 'FINISHED'
+)
+
+SELECT
+    team,
+    SUM(points)         AS points,
+    SUM(wins)           AS wins,
+    SUM(draws)          AS draws,
+    SUM(losses)         AS losses,
+    SUM(goals_scored)   AS goals_scored,
+    SUM(goals_conceded) AS goals_conceded,
+    SUM(goals_scored) - SUM(goals_conceded) AS goal_difference
+FROM match_results
+GROUP BY team
+ORDER BY points DESC, goal_difference DESC
+  );
+[0m20:40:39.270153 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:40:39.316724 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.046 seconds
+[0m20:40:39.323860 [debug] [Thread-1 (]: Using postgres connection "model.copa2026.team_rankings"
+[0m20:40:39.324379 [debug] [Thread-1 (]: On model.copa2026.team_rankings: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "copa2026", "target_name": "dev", "node_id": "model.copa2026.team_rankings"} */
+alter table "copa2026"."public"."team_rankings__dbt_tmp" rename to "team_rankings"
+[0m20:40:39.331053 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.006 seconds
+[0m20:40:39.350160 [debug] [Thread-1 (]: On model.copa2026.team_rankings: COMMIT
+[0m20:40:39.350698 [debug] [Thread-1 (]: Using postgres connection "model.copa2026.team_rankings"
+[0m20:40:39.351093 [debug] [Thread-1 (]: On model.copa2026.team_rankings: COMMIT
+[0m20:40:39.354986 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m20:40:39.362164 [debug] [Thread-1 (]: Applying DROP to: "copa2026"."public"."team_rankings__dbt_backup"
+[0m20:40:39.368703 [debug] [Thread-1 (]: Using postgres connection "model.copa2026.team_rankings"
+[0m20:40:39.369228 [debug] [Thread-1 (]: On model.copa2026.team_rankings: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "copa2026", "target_name": "dev", "node_id": "model.copa2026.team_rankings"} */
+drop view if exists "copa2026"."public"."team_rankings__dbt_backup" cascade
+[0m20:40:39.374570 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.005 seconds
+[0m20:40:39.377578 [debug] [Thread-1 (]: On model.copa2026.team_rankings: Close
+[0m20:40:39.379559 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a16b2d81-e1a0-4aaa-9492-21d8c4a48926', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f511a2ceb70>]}
+[0m20:40:39.380557 [info ] [Thread-1 (]: 1 of 1 OK created sql view model public.team_rankings .......................... [[32mCREATE VIEW[0m in 0.18s]
+[0m20:40:39.381719 [debug] [Thread-1 (]: Finished running node model.copa2026.team_rankings
+[0m20:40:39.385255 [debug] [MainThread]: On master: COMMIT
+[0m20:40:39.385842 [debug] [MainThread]: Using postgres connection "master"
+[0m20:40:39.386211 [debug] [MainThread]: On master: COMMIT
+[0m20:40:39.386555 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:40:39.394347 [debug] [MainThread]: SQL status: COMMIT in 0.008 seconds
+[0m20:40:39.394858 [debug] [MainThread]: On master: Close
+[0m20:40:39.395431 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:40:39.395785 [debug] [MainThread]: Connection 'model.copa2026.team_rankings' was properly closed.
+[0m20:40:39.396149 [info ] [MainThread]: 
+[0m20:40:39.396830 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.39 seconds (0.39s).
+[0m20:40:39.398791 [debug] [MainThread]: Command end result
+[0m20:40:39.445172 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_project/target/manifest.json
+[0m20:40:39.449099 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_project/target/semantic_manifest.json
+[0m20:40:39.451610 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt_project/target/osi_document.json
+[0m20:40:39.460908 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt_project/target/run_results.json
+[0m20:40:39.461372 [info ] [MainThread]: 
+[0m20:40:39.462015 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:40:39.462527 [info ] [MainThread]: 
+[0m20:40:39.463885 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1
+[0m20:40:39.470942 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.0708966, "process_in_blocks": "136", "process_kernel_time": 1.545562, "process_mem_max_rss": "134608", "process_out_blocks": "2984", "process_user_time": 5.628798}
+[0m20:40:39.472221 [debug] [MainThread]: Command `dbt run` succeeded at 20:40:39.471959 after 4.07 seconds
+[0m20:40:39.473477 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f511a317920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5117771b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f51167affb0>]}
+[0m20:40:39.474684 [debug] [MainThread]: Flushing usage events
+[0m20:40:40.184291 [debug] [MainThread]: An error was encountered while trying to flush usage events
