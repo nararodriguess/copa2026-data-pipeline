@@ -5,6 +5,10 @@ import requests
 import json
 import os
 import logging
+import sys
+
+sys.path.insert(0, "/opt/airflow/scripts")
+from transform_games import run as transform_and_load
 
 API_KEY = os.getenv("API_KEY")
 logger = logging.getLogger(__name__)
@@ -39,3 +43,10 @@ with DAG(
         task_id="get_games",
         python_callable=get_games,
     )
+
+    task_transform = PythonOperator(
+        task_id="transform_and_load",
+        python_callable=transform_and_load,
+    )
+
+    task_get >> task_transform
