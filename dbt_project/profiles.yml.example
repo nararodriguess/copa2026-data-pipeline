@@ -1,0 +1,12 @@
+copa2026:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: YOUR_HOST
+      port: 5432
+      dbname: YOUR_DB
+      user: YOUR_USER
+      password: YOUR_PASSWORD
+      schema: public
+      threads: 1

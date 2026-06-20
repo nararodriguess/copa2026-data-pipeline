@@ -2,3 +2,6 @@
 data/
 __pycache__/
 *.pyc
+dbt_project/profiles.yml
+dbt_project/target/
+dbt_project/logs/
