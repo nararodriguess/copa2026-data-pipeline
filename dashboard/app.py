@@ -11,7 +11,7 @@ DB_CONFIG = {
     "password": os.getenv("DB_PASSWORD", "copa123")
 }
 
-@st.cache_data(ttl=300)
+@st.cache_data(ttl=300) #guarda o resultado da função por 5 min.
 def load_rankings():
     conn = psycopg2.connect(**DB_CONFIG)
     df = pd.read_sql("SELECT * FROM team_rankings ORDER BY points DESC, goal_difference DESC", conn)

@@ -30,6 +30,20 @@ services:
     ports:
       - "8080:8080"
     command: standalone
+  dashboard:
+    image: python:3.12-slim
+    depends_on:
+      - postgres
+    env_file:
+      - .env
+    volumes:
+      - ./dashboard:/app
+    working_dir: /app
+    command: >
+      bash -c "pip install streamlit psycopg2-binary pandas --quiet &&
+               streamlit run app.py --server.port 8501 --server.address 0.0.0.0"
+    ports:
+      - "8501:8501"
 
 volumes:
   postgres_data:
